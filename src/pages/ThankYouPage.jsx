@@ -22,7 +22,7 @@ export default function ThankYouPage() {
 
   const deleteAccount = async () => {
     try {
-      await axios.delete(`http://localhost:5000/auth/remove-account/${user.email}`);
+      await axios.delete(`https://authentication-8-kybt.onrender.com/auth/remove-account/${user.email}`);
       localStorage.clear();
       navigate('/');
     } catch {

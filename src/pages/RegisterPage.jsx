@@ -32,7 +32,7 @@ export default function RegisterPage() {
     Object.keys(form).forEach((key) => formData.append(key, form[key]));
 
     try {
-      await axios.post('http://localhost:5000/auth/register', formData, {
+      await axios.post('https://authentication-8-kybt.onrender.com/auth/register', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
