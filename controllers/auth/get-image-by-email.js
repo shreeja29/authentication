@@ -4,13 +4,14 @@ const getImageByEmailController = (authService) => {
       console.log({ email });
   
       try {
-        const userImage = await authService.getImageByEmail(email);
+        const authFunc=authService();
+        const userImage = await authFunc.getImageByEmail(email);
         console.log({ userImage });
   
         if (!userImage) {
           return res.status(404).json({ error: 'Image not found' });
         }
-  
+        
         const base64Image = userImage.toString('base64');
         console.log({ base64Image });
   

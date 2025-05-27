@@ -4,12 +4,13 @@ const verifyOtpController = (authService) => {
 
     try {
       const { email, otp } = req.body;
-
-      const verified = await authService.verifyOtp(email, otp);
+      const authFunc=authService();
+      const verified = await authFunc.verifyOtp(email, otp);
       console.log({ verified });
 
       if (verified) {
-        const user = await authService.userDetails(email);
+        const authFunc=authService();
+        const user = await authFunc.userDetails(email);
         res.status(200).json({ message: 'OTP verified', user });
       }
     } catch (error) {

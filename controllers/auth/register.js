@@ -16,8 +16,10 @@ const registerController = (authService) => {
         dob,
         image: imageBuffer,
       };
+       
+      const authFunc=authService();
 
-      const createdUser = await authService.registerUser(userData);
+      const createdUser = await authFunc.registerUser(userData);
       console.log({ createdUser });
 
       res.status(201).json({ message: 'User registered', user: createdUser });

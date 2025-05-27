@@ -4,11 +4,11 @@ const otpModel = require('../../models/optModel');
 const { sendOtpEmail } = require('../../helpers/email');
 
 // All pure logic functions (no requires inside them)
-const registerUser = require('./registerUser');
-const loginUser = require('./loginUser');
-const verifyOtp = require('./verifyOtp');
-const removeAccount = require('./removeAccount');
-const getImageByEmail = require('./getImageByEmail');
+const registerUser = require('./register');
+const loginUser = require('./login');
+const verifyOtp = require('./verify-otp');
+const removeAccount = require('./remove-account');
+const getImageByEmail = require('./get-image-by-email');
 const userDetails = require('./userDetails');
 
 const authService = () => {

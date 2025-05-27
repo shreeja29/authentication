@@ -1,8 +1,8 @@
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
-const userModel = require('../models/userModel');
-const otpModel = require('../models/optModel');
-const {sendOtpEmail}=require('../helpers/email');
+const userModel = require('../../models/userModel');
+const otpModel = require('../../models/optModel');
+const {sendOtpEmail}=require('../../helpers/email');
 const saltRounds = 10;
 
 const verifyOtpUsecase = async (userId, otp_code) => {
@@ -17,4 +17,4 @@ const verifyOtpUsecase = async (userId, otp_code) => {
   await otpModel.deleteOtpByUserId(userId);
   return true;
 };
-module.exports={verifyOtpUsecase};
+module.exports=verifyOtpUsecase;

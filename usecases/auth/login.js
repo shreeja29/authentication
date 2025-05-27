@@ -1,8 +1,8 @@
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
-const userModel = require('../models/userModel');
-const otpModel = require('../models/optModel');
-const {sendOtpEmail}=require('../helpers/email');
+const userModel = require('../../models/userModel');
+const otpModel = require('../../models/optModel');
+const {sendOtpEmail}=require('../../helpers/email');
 const saltRounds = 10;
 
 const loginUser = async (email, password) => {
@@ -25,4 +25,4 @@ const loginUser = async (email, password) => {
     await sendOtpEmail(user.email,otp_code);
     return { user, otp_code };
   };
-  module.exports={loginUser};
+  module.exports=loginUser;

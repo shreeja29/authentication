@@ -3,8 +3,8 @@ const loginController = (authService) => {
     try {
       const { email, password } = req.body;
       console.log({ email, password });
-
-      const { user, otp_code } = await authService.loginUser(email, password);
+      const authFunc=authService();
+      const { user, otp_code } = await authFunc.loginUser(email, password);
       console.log({ otp_code });
 
       res.status(200).json({ message: 'OTP generated', userId: user.id, otp_code });
