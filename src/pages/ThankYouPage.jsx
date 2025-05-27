@@ -10,7 +10,7 @@ export default function ThankYouPage() {
   useEffect(() => {
     const fetchImage = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/auth/user-image/${user.email}`);
+        const res = await axios.get(`https://authentication-backend-8vge.onrender.com/auth/user-image/${user.email}`);
         setImageSrc(`data:image/jpeg;base64,${res.data.image}`);
       } catch (err) {
         console.error('Failed to load image', err);
@@ -22,7 +22,7 @@ export default function ThankYouPage() {
 
   const deleteAccount = async () => {
     try {
-      await axios.delete(`https://authentication-8-kybt.onrender.com/auth/remove-account/${user.email}`);
+      await axios.delete(`https://authentication-backend-8vge.onrender.com/auth/remove-account/${user.email}`);
       localStorage.clear();
       navigate('/');
     } catch {

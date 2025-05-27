@@ -10,7 +10,7 @@ export default function OTPPage() {
   const verifyOtp = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://authentication-8-kybt.onrender.com/auth/verify-otp', { email, otp });
+      const res = await axios.post('https://authentication-backend-8vge.onrender.com/auth/verify-otp', { email, otp });
       localStorage.setItem('user', JSON.stringify(res.data.user));
     
       

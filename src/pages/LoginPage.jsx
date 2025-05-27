@@ -10,14 +10,14 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://authentication-8-kybt.onrender.com/auth/login', { email, password });
+      const res = await axios.post('https://authentication-backend-8vge.onrender.com/auth/login', { email, password });
       localStorage.setItem('email', email);
       navigate('/otp');
     } catch {
       navigate('/error');
     }
   };
-
+ 
   return (
     <div style={styles.container}>
       <div style={styles.card}>
