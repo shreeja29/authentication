@@ -43,6 +43,7 @@ db/index.js
 
 ##create table 
 go on terminal  and connect to psql as your user to your database and then run 
+\c "your db name" "username"
 \i migration.sql
 
 
