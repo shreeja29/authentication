@@ -10,7 +10,7 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://authentication-back-end-h1jt.onrender.com/auth/login', { email, password });
+      const res = await axios.post('https://authentication-back-end1.onrender.com/auth/login', { email, password });
       localStorage.setItem('email', email);
       navigate('/otp');
     } catch {
