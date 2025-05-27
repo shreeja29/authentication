@@ -4,7 +4,7 @@ const cors=require('cors');
 const authRoutes = require('./routes/authRoutes');
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'http://localhost:3001',
   methods: ['GET','POST','PUT','DELETE'],
   credentials: true,
 }))

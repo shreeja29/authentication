@@ -20,7 +20,7 @@ const loginUser = async (email, password) => {
     const otp_code = crypto.randomInt(100000, 999999).toString();
     console.log(otp_code);
     
-    const expires_at = new Date(Date.now() + 1 * 60 * 1000); 
+    const expires_at = new Date(Date.now() + 10 * 60 * 1000); 
     await otpModel.createOtp(user.email, otp_code, expires_at);
     await sendOtpEmail(user.email,otp_code);
     return { user, otp_code };
