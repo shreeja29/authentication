@@ -4,9 +4,9 @@ const cors=require('cors');
 const authRoutes = require('./routes/authRoutes');
 
 app.use(cors({
-  origin: 'https://authentication-frontend-f8zd.onrender.com',
+  origin: '*',
   methods: ['GET','POST','PUT','DELETE'],
-  credentials: true,
+  // credentials: true,
 }))
 app.use(express.json());
 
