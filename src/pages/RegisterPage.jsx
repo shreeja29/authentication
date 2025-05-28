@@ -51,7 +51,7 @@ export default function RegisterPage() {
           <input name="name" placeholder="Name" onChange={handleChange} required style={styles.input} />
           <input name="email" placeholder="Email" type="email" onChange={handleChange} required style={styles.input} />
           <input name="password" placeholder="Password" type="password" onChange={handleChange} required style={styles.input} />
-          <input name="company" placeholder="Company" onChange={handleChange} style={styles.input} />
+          <input name="company_name" placeholder="Company" onChange={handleChange} style={styles.input} />
           <input name="age" placeholder="Age" type="number" onChange={handleChange} style={styles.input} />
           <input name="dob" placeholder="DOB" type="date" onChange={handleChange} style={styles.input} />
           <input name="image" type="file" accept="image/png, image/jpeg" onChange={handleImage} required style={styles.inputFile} />
