@@ -37,8 +37,9 @@ export default function ThankYouPage() {
         {imageSrc && <img src={imageSrc} alt="Profile" style={styles.image} />}
         <div style={styles.info}>
           <p><strong>Email:</strong> {user.email}</p>
-          <p><strong>Company:</strong> {user.company}</p>
+          <p><strong>Company:</strong> {user.company_name}</p>
           <p><strong>Age:</strong> {user.age}</p>
+          <p><strong>DOB:</strong> {user.dob}</p>
         </div>
         <button onClick={deleteAccount} style={styles.button}>Remove Account</button>
       </div>
