@@ -47,7 +47,7 @@ go on terminal  and connect to psql as your user to your database and then run
 \i migration.sql
 
 
-#if you want to change port for backend go on app.js and change it there and also in app.js put your frontend port also or check it
+#if you want to change port for backend go on app.js and change it there
 
 
 #apis
