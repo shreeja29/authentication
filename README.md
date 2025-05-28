@@ -46,3 +46,9 @@ npm install
 
 # Start the development server
 npm start
+
+
+
+#backend api
+in src/Pages/...
+in all files inside it change api url baseurl if you are running your backend on some other url 
